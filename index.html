@@ -1,175 +1,57 @@
-<!doctype html>
-<html lang="en-GB">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TellyBox Protect is an Android VPN project built around WireGuard, device-owned keys and a secure HTTPS backend.">
-  <meta name="theme-color" content="#07111f">
-  <title>TellyBox Protect — Simple, secure VPN for Android</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TellyBox Protect — simple, secure VPN protection." />
+  <title>TellyBox Protect</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="TellyBox Protect home">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 48 48" role="img">
-          <path d="M24 3 41 9v12c0 11.2-6.8 19.8-17 24-10.2-4.2-17-12.8-17-24V9l17-6Z" fill="currentColor" opacity=".18"/>
-          <path d="M24 6.8 37.5 11.5v9.2c0 8.8-5.1 15.9-13.5 20-8.4-4.1-13.5-11.2-13.5-20v-9.2L24 6.8Z" fill="none" stroke="currentColor" stroke-width="2.4"/>
-          <path d="m17.5 23.5 4.2 4.2 9-9" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span>
-      <span>TellyBox Protect</span>
-    </a>
-
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#features">Features</a>
-      <a href="#security">Security</a>
-      <a href="#status">Status</a>
-      <a class="nav-cta" href="https://github.com/sroberts1888-sudo/tellyboxprotect">GitHub</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero section-shell">
+  <main>
+    <section class="hero">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="status-dot"></span> Android VPN in active development</div>
-        <h1>VPN protection that keeps the complicated bits out of your way.</h1>
-        <p class="hero-lead">TellyBox Protect is a focused Android VPN built on WireGuard, with device-owned cryptographic keys, secure HTTPS account services and a simple connect/disconnect experience.</p>
+        <p class="eyebrow">Private • Simple • Protected</p>
+        <h1>TellyBox Protect</h1>
+        <p class="lead">A simple VPN app designed to protect your connection with a clean, no-nonsense experience.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#status">See development status</a>
-          <a class="button button-secondary" href="#how-it-works">How it works</a>
-        </div>
-        <div class="trust-row" aria-label="Highlights">
-          <span>WireGuard</span>
-          <span>HTTPS backend</span>
-          <span>Private keys stay on-device</span>
+          <a class="button primary" href="support.html">Support</a>
+          <a class="button secondary" href="privacy.html">Privacy</a>
         </div>
       </div>
-
-      <div class="hero-card" aria-label="TellyBox Protect connection preview">
-        <div class="phone-frame">
-          <div class="phone-top"><span></span><span></span><span></span></div>
-          <div class="app-title">TellyBox Protect</div>
-          <div class="shield-orb" aria-hidden="true">
-            <svg viewBox="0 0 100 100">
-              <path d="M50 9 81 20v22c0 20-12.2 35.4-31 43-18.8-7.6-31-23-31-43V20L50 9Z" fill="none" stroke="currentColor" stroke-width="4"/>
-              <path d="m36 49 9 9 20-20" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="connection-state">Ready to protect</div>
-          <div class="connection-detail">Secure WireGuard connection</div>
-          <div class="connect-button">CONNECT</div>
-          <div class="mini-stats">
-            <div><small>Protocol</small><strong>WireGuard</strong></div>
-            <div><small>Transport</small><strong>Encrypted</strong></div>
-          </div>
-        </div>
+      <div class="phone-card" aria-label="TellyBox Protect app preview">
+        <div class="phone-status">Protected</div>
+        <div class="shield">✓</div>
+        <p>Secure VPN connection</p>
       </div>
     </section>
 
-    <section class="section section-shell" id="features">
-      <div class="section-heading">
-        <span class="kicker">Built to stay simple</span>
-        <h2>The essentials, without the clutter.</h2>
-        <p>TellyBox Protect is being built around a small set of features that matter for a reliable everyday VPN.</p>
-      </div>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <div class="icon">⚡</div>
-          <h3>Fast WireGuard tunnel</h3>
-          <p>The Android client uses the official WireGuard tunnel library rather than a custom VPN protocol.</p>
-        </article>
-        <article class="feature-card">
-          <div class="icon">🔐</div>
-          <h3>Device-owned private keys</h3>
-          <p>The client private key is generated and kept locally. Only the public key is registered with the backend.</p>
-        </article>
-        <article class="feature-card">
-          <div class="icon">📱</div>
-          <h3>Simple Android experience</h3>
-          <p>Account login, VPN permission, connect, disconnect and status are being designed as a straightforward mobile flow.</p>
-        </article>
-        <article class="feature-card">
-          <div class="icon">🌐</div>
-          <h3>Secure account API</h3>
-          <p>The production Android app communicates with the backend over HTTPS at a dedicated API endpoint.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-shell split" id="security">
-      <div>
-        <span class="kicker">Security architecture</span>
-        <h2>Your VPN identity starts on your device.</h2>
-        <p class="section-copy">TellyBox Protect separates the Android device identity from the server configuration. The backend receives the public key it needs to create a WireGuard peer; the private key remains local to the device.</p>
-        <div class="security-points">
-          <div><span>01</span><p><strong>Local key generation</strong><br>WireGuard key material is created on the Android device.</p></div>
-          <div><span>02</span><p><strong>Encrypted local persistence</strong><br>Account-scoped configuration and identity data use Android Keystore-backed storage.</p></div>
-          <div><span>03</span><p><strong>Restricted server boundary</strong><br>The backend uses a narrowly scoped privileged helper for WireGuard peer management.</p></div>
-        </div>
-      </div>
-      <div class="architecture-card" id="how-it-works">
-        <div class="arch-step"><b>1</b><span>Android app</span><small>creates & keeps private key</small></div>
-        <div class="arch-arrow">↓</div>
-        <div class="arch-step"><b>2</b><span>HTTPS API</span><small>authenticates & registers device</small></div>
-        <div class="arch-arrow">↓</div>
-        <div class="arch-step"><b>3</b><span>VPN server</span><small>allocates peer configuration</small></div>
-        <div class="arch-arrow">↓</div>
-        <div class="arch-step accent"><b>4</b><span>WireGuard tunnel</span><small>secure traffic path</small></div>
-      </div>
-    </section>
-
-    <section class="section section-shell" id="status">
-      <div class="status-panel">
-        <div>
-          <span class="kicker">Development status</span>
-          <h2>Live backend. Real device registration. Tunnel connection next.</h2>
-          <p>The Android app can authenticate against the live HTTPS backend and has successfully registered a backend-managed WireGuard peer on the VPN server. Real Android tunnel startup and connection lifecycle work are the current development focus.</p>
-        </div>
-        <div class="milestones" aria-label="Development milestones">
-          <div class="milestone done"><span>✓</span><p>HTTPS backend deployed</p></div>
-          <div class="milestone done"><span>✓</span><p>Android login working</p></div>
-          <div class="milestone done"><span>✓</span><p>Backend-managed peer creation</p></div>
-          <div class="milestone current"><span>→</span><p>Real Android tunnel startup</p></div>
-          <div class="milestone"><span>•</span><p>Broader device testing</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-shell faq">
-      <div class="section-heading compact">
-        <span class="kicker">About the project</span>
-        <h2>Frequently asked questions</h2>
-      </div>
-      <details>
-        <summary>Is TellyBox Protect available to download yet?</summary>
-        <p>Not publicly yet. It is currently an active development and device-testing project.</p>
-      </details>
-      <details>
-        <summary>What VPN technology does it use?</summary>
-        <p>WireGuard. The Android project uses the official WireGuard Android tunnel library.</p>
-      </details>
-      <details>
-        <summary>Does the server receive my private WireGuard key?</summary>
-        <p>No. The architecture is designed so the client private key remains on the Android device and the backend receives only the corresponding public key.</p>
-      </details>
-      <details>
-        <summary>Is the project open source?</summary>
-        <p>The public project website is hosted from GitHub. Repository visibility and release source availability may change as development progresses.</p>
-      </details>
+    <section class="feature-grid">
+      <article class="card">
+        <h2>Simple by design</h2>
+        <p>Connect and disconnect without complicated setup or technical clutter.</p>
+      </article>
+      <article class="card">
+        <h2>Private device identity</h2>
+        <p>Your VPN private key is generated and stored on your device and is not sent to the service backend.</p>
+      </article>
+      <article class="card">
+        <h2>Built for reliability</h2>
+        <p>TellyBox Protect is designed to preserve your device registration and reconnect cleanly when needed.</p>
+      </article>
     </section>
   </main>
 
-  <footer class="site-footer section-shell">
-    <div class="footer-brand">
-      <strong>TellyBox Protect</strong>
-      <span>Android VPN project</span>
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 TellyBox Protect</span>
+      <nav aria-label="Footer navigation">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <span>tellyboxprotect.co.uk</span>
     </div>
-    <div class="footer-links">
-      <a href="https://github.com/sroberts1888-sudo/tellyboxprotect">GitHub</a>
-      <a href="https://tellyboxprotect.co.uk">tellyboxprotect.co.uk</a>
-    </div>
-    <p class="copyright">© 2026 TellyBox Protect. Development project.</p>
   </footer>
 </body>
 </html>
